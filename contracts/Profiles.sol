@@ -1,34 +1,45 @@
 pragma solidity ^0.4.24;
 
-contract CurryProfiles {
-    /// @title A curry has registered.
-    event CurryRegistered(uint curryId);
-
-    /// @title A curry has updated their wallet address.
-    event CurryAddressUpdated(uint curryId, address newAddress);
-
-    /// @title List of Curry
-    CurryProfile[] curryList;
-
-    /// @title Contract Mappings of Curry
-    mapping (address => uint) addressToCurry;
-
-    /// @title Personal Profile of the curry
-    struct CurryProfile {
+library Profiles {
+    // Personal Profile of the curry
+    struct Profile {
         string name;
         address wallet;
         uint rank;
     }
+}
 
-    function getCurryId() public returns (uint) {
+contract CurryProfiles {
+    using Profiles for *;
+
+    // A curry has registered.
+    event Registered(uint curryId);
+
+    // A curry has updated their wallet address.
+    event AddressUpdated(uint curryId, address newAddress);
+
+    // List of Curry
+    Profiles.Profile[] public curryList;
+
+    // Contract Mappings of Curry
+    mapping (address => uint) addressToCurry;
+
+    function getProfile(uint curryId)
+    public view returns (string, address, uint) {
+        Profiles.Profile memory curry = curryList[curryId];
+
+        return (curry.name, curry.wallet, curry.rank);
+    }
+
+    function getCurryId() public view returns (uint) {
         return addressToCurry[msg.sender];
     }
 
-    /// @title Register as a curry
+    // Register as a curry
     function registerAsCurry(string name, uint price)
     public returns (uint) {
         // Create the Curry Profile
-        CurryProfile memory curry = CurryProfile(name, msg.sender, 0);
+        Profiles.Profile memory curry = Profiles.Profile(name, msg.sender, 0);
 
         // Adds the profile to curryList
         uint id = curryList.push(curry);
@@ -36,25 +47,25 @@ contract CurryProfiles {
         // Assigns your wallet address to addressToCurry
         addressToCurry[msg.sender] = id;
 
-        emit CurryRegistered(id);
+        emit Registered(id);
 
         return id;
     }
 
-    /// @title Update the wallet address as a curry
+    // Update the wallet address as a curry
     function updateAddressAsCurry(address newAddress) public {
         address currentAddress = msg.sender;
 
-        // Set the new wallet address in CurryProfile List
+        // Set the new wallet address in Profile List
         uint id = addressToCurry[currentAddress];
         curryList[id].wallet = newAddress;
 
-        // Set the new wallet address to your CurryProfile ID
+        // Set the new wallet address to your Profile ID
         addressToCurry[newAddress] = id;
 
         // Remove the old wallet address from the list.
         delete addressToCurry[msg.sender];
 
-        emit CurryAddressUpdated(id, newAddress);
+        emit AddressUpdated(id, newAddress);
     }
 }

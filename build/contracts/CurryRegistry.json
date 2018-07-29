@@ -1,0 +1,1244 @@
+{
+  "contractName": "CurryRegistry",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_interfaceId",
+          "type": "bytes4"
+        }
+      ],
+      "name": "supportsInterface",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "jobsMapping",
+      "outputs": [
+        {
+          "name": "price",
+          "type": "uint256"
+        },
+        {
+          "name": "status",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "name",
+      "outputs": [
+        {
+          "name": "_name",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getApproved",
+      "outputs": [
+        {
+          "name": "_operator",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "approve",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "curryList",
+      "outputs": [
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "wallet",
+          "type": "address"
+        },
+        {
+          "name": "rank",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "totalSupply",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "curryId",
+          "type": "uint256"
+        }
+      ],
+      "name": "payCurry",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "customer",
+          "type": "address"
+        },
+        {
+          "name": "status",
+          "type": "uint8"
+        }
+      ],
+      "name": "updateJobStatus",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "curryId",
+          "type": "uint256"
+        },
+        {
+          "name": "price",
+          "type": "uint256"
+        }
+      ],
+      "name": "createJob",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "transferFrom",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "name": "_index",
+          "type": "uint256"
+        }
+      ],
+      "name": "tokenOfOwnerByIndex",
+      "outputs": [
+        {
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "newAddress",
+          "type": "address"
+        }
+      ],
+      "name": "updateAddressAsCurry",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "safeTransferFrom",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "exists",
+      "outputs": [
+        {
+          "name": "_exists",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_index",
+          "type": "uint256"
+        }
+      ],
+      "name": "tokenByIndex",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "customer",
+          "type": "address"
+        }
+      ],
+      "name": "markDoneAsCurry",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "curryId",
+          "type": "uint256"
+        }
+      ],
+      "name": "markDoneAsCustomer",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "customer",
+          "type": "address"
+        }
+      ],
+      "name": "startJobAsCurry",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "ownerOf",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "customer",
+          "type": "address"
+        }
+      ],
+      "name": "cancelJob",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "customer",
+          "type": "address"
+        }
+      ],
+      "name": "rejectJobAsCurry",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "symbol",
+      "outputs": [
+        {
+          "name": "_symbol",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "customer",
+          "type": "address"
+        }
+      ],
+      "name": "acceptJobAsCurry",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_operator",
+          "type": "address"
+        },
+        {
+          "name": "_approved",
+          "type": "bool"
+        }
+      ],
+      "name": "setApprovalForAll",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "price",
+          "type": "uint256"
+        }
+      ],
+      "name": "registerAsCurry",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "name": "_tokenId",
+          "type": "uint256"
+        },
+        {
+          "name": "_data",
+          "type": "bytes"
+        }
+      ],
+      "name": "safeTransferFrom",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "curryId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getJob",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "tokenURI",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "curryId",
+          "type": "uint256"
+        },
+        {
+          "name": "price",
+          "type": "uint256"
+        }
+      ],
+      "name": "bookCurry",
+      "outputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "name": "_operator",
+          "type": "address"
+        }
+      ],
+      "name": "isApprovedForAll",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "curryId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getProfile",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        },
+        {
+          "name": "",
+          "type": "address"
+        },
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getCurryId",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "curryId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "customer",
+          "type": "address"
+        }
+      ],
+      "name": "CurryPaid",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "curryId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "customer",
+          "type": "address"
+        }
+      ],
+      "name": "CurryRequested",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "Transfer",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "_approved",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "Approval",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "_operator",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_approved",
+          "type": "bool"
+        }
+      ],
+      "name": "ApprovalForAll",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "curryId",
+          "type": "uint256"
+        }
+      ],
+      "name": "Registered",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "curryId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "newAddress",
+          "type": "address"
+        }
+      ],
+      "name": "AddressUpdated",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "curryId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "customer",
+          "type": "address"
+        }
+      ],
+      "name": "Accepted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "curryId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "customer",
+          "type": "address"
+        }
+      ],
+      "name": "Rejected",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "curryId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "customer",
+          "type": "address"
+        }
+      ],
+      "name": "Canceled",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "curryId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "customer",
+          "type": "address"
+        }
+      ],
+      "name": "InProgress",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "curryId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "customer",
+          "type": "address"
+        }
+      ],
+      "name": "JobAwaitingPayment",
+      "type": "event"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.4.24;\n\nimport \"./Base.sol\";\nimport \"./Jobs.sol\";\nimport \"./Payment.sol\";\nimport \"./Profiles.sol\";\nimport \"./Bookings.sol\";\n\ncontract CurryRegistry is CurryJobs, CurryProfiles, CurryBookings, CurryPayment {}\n",
+  "sourcePath": "/Users/phoomparin/Projects/curry-chain/contracts/Registry.sol",
+  "ast": {
+    "absolutePath": "/Users/phoomparin/Projects/curry-chain/contracts/Registry.sol",
+    "exportedSymbols": {
+      "CurryRegistry": [
+        769
+      ]
+    },
+    "id": 770,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 755,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:6"
+      },
+      {
+        "absolutePath": "/Users/phoomparin/Projects/curry-chain/contracts/Base.sol",
+        "file": "./Base.sol",
+        "id": 756,
+        "nodeType": "ImportDirective",
+        "scope": 770,
+        "sourceUnit": 42,
+        "src": "26:20:6",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/phoomparin/Projects/curry-chain/contracts/Jobs.sol",
+        "file": "./Jobs.sol",
+        "id": 757,
+        "nodeType": "ImportDirective",
+        "scope": 770,
+        "sourceUnit": 417,
+        "src": "47:20:6",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/phoomparin/Projects/curry-chain/contracts/Payment.sol",
+        "file": "./Payment.sol",
+        "id": 758,
+        "nodeType": "ImportDirective",
+        "scope": 770,
+        "sourceUnit": 602,
+        "src": "68:23:6",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/phoomparin/Projects/curry-chain/contracts/Profiles.sol",
+        "file": "./Profiles.sol",
+        "id": 759,
+        "nodeType": "ImportDirective",
+        "scope": 770,
+        "sourceUnit": 754,
+        "src": "92:24:6",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/phoomparin/Projects/curry-chain/contracts/Bookings.sol",
+        "file": "./Bookings.sol",
+        "id": 760,
+        "nodeType": "ImportDirective",
+        "scope": 770,
+        "sourceUnit": 125,
+        "src": "117:24:6",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 761,
+              "name": "CurryJobs",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 416,
+              "src": "169:9:6",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_CurryJobs_$416",
+                "typeString": "contract CurryJobs"
+              }
+            },
+            "id": 762,
+            "nodeType": "InheritanceSpecifier",
+            "src": "169:9:6"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 763,
+              "name": "CurryProfiles",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 753,
+              "src": "180:13:6",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_CurryProfiles_$753",
+                "typeString": "contract CurryProfiles"
+              }
+            },
+            "id": 764,
+            "nodeType": "InheritanceSpecifier",
+            "src": "180:13:6"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 765,
+              "name": "CurryBookings",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 124,
+              "src": "195:13:6",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_CurryBookings_$124",
+                "typeString": "contract CurryBookings"
+              }
+            },
+            "id": 766,
+            "nodeType": "InheritanceSpecifier",
+            "src": "195:13:6"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 767,
+              "name": "CurryPayment",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 601,
+              "src": "210:12:6",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_CurryPayment_$601",
+                "typeString": "contract CurryPayment"
+              }
+            },
+            "id": 768,
+            "nodeType": "InheritanceSpecifier",
+            "src": "210:12:6"
+          }
+        ],
+        "contractDependencies": [
+          41,
+          124,
+          416,
+          601,
+          753,
+          978,
+          1174,
+          1194,
+          1201,
+          1311
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 769,
+        "linearizedBaseContracts": [
+          769,
+          601,
+          124,
+          41,
+          1201,
+          1194,
+          1174,
+          1311,
+          978,
+          753,
+          416
+        ],
+        "name": "CurryRegistry",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 770,
+        "src": "143:82:6"
+      }
+    ],
+    "src": "0:226:6"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/phoomparin/Projects/curry-chain/contracts/Registry.sol",
+    "exportedSymbols": {
+      "CurryRegistry": [
+        769
+      ]
+    },
+    "id": 770,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 755,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:6"
+      },
+      {
+        "absolutePath": "/Users/phoomparin/Projects/curry-chain/contracts/Base.sol",
+        "file": "./Base.sol",
+        "id": 756,
+        "nodeType": "ImportDirective",
+        "scope": 770,
+        "sourceUnit": 42,
+        "src": "26:20:6",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/phoomparin/Projects/curry-chain/contracts/Jobs.sol",
+        "file": "./Jobs.sol",
+        "id": 757,
+        "nodeType": "ImportDirective",
+        "scope": 770,
+        "sourceUnit": 417,
+        "src": "47:20:6",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/phoomparin/Projects/curry-chain/contracts/Payment.sol",
+        "file": "./Payment.sol",
+        "id": 758,
+        "nodeType": "ImportDirective",
+        "scope": 770,
+        "sourceUnit": 602,
+        "src": "68:23:6",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/phoomparin/Projects/curry-chain/contracts/Profiles.sol",
+        "file": "./Profiles.sol",
+        "id": 759,
+        "nodeType": "ImportDirective",
+        "scope": 770,
+        "sourceUnit": 754,
+        "src": "92:24:6",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/phoomparin/Projects/curry-chain/contracts/Bookings.sol",
+        "file": "./Bookings.sol",
+        "id": 760,
+        "nodeType": "ImportDirective",
+        "scope": 770,
+        "sourceUnit": 125,
+        "src": "117:24:6",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 761,
+              "name": "CurryJobs",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 416,
+              "src": "169:9:6",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_CurryJobs_$416",
+                "typeString": "contract CurryJobs"
+              }
+            },
+            "id": 762,
+            "nodeType": "InheritanceSpecifier",
+            "src": "169:9:6"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 763,
+              "name": "CurryProfiles",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 753,
+              "src": "180:13:6",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_CurryProfiles_$753",
+                "typeString": "contract CurryProfiles"
+              }
+            },
+            "id": 764,
+            "nodeType": "InheritanceSpecifier",
+            "src": "180:13:6"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 765,
+              "name": "CurryBookings",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 124,
+              "src": "195:13:6",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_CurryBookings_$124",
+                "typeString": "contract CurryBookings"
+              }
+            },
+            "id": 766,
+            "nodeType": "InheritanceSpecifier",
+            "src": "195:13:6"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 767,
+              "name": "CurryPayment",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 601,
+              "src": "210:12:6",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_CurryPayment_$601",
+                "typeString": "contract CurryPayment"
+              }
+            },
+            "id": 768,
+            "nodeType": "InheritanceSpecifier",
+            "src": "210:12:6"
+          }
+        ],
+        "contractDependencies": [
+          41,
+          124,
+          416,
+          601,
+          753,
+          978,
+          1174,
+          1194,
+          1201,
+          1311
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 769,
+        "linearizedBaseContracts": [
+          769,
+          601,
+          124,
+          41,
+          1201,
+          1194,
+          1174,
+          1311,
+          978,
+          753,
+          416
+        ],
+        "name": "CurryRegistry",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 770,
+        "src": "143:82:6"
+      }
+    ],
+    "src": "0:226:6"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2018-07-29T13:43:23.423Z"
+}

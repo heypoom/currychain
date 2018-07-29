@@ -8,10 +8,10 @@ contract CurryBookings is CurryBase {
     CurryJobs jobs = CurryJobs(msg.sender);
     CurryToken token = CurryToken(msg.sender);
 
-    /// @title A curry was requested by a customer
+    // A curry was requested by a customer
     event CurryRequested(uint curryId, address customer);
 
-    /// @title Book a job for the curry
+    // Book a job for the curry
     /// @dev Can a curry be owned by many customers at the same time?
     function bookCurry(uint curryId, uint price) public payable {
         uint balance = token.balanceOf(msg.sender);
@@ -27,7 +27,7 @@ contract CurryBookings is CurryBase {
         ownerCurryCount[msg.sender]++;
 
         // Book a job!
-        jobs.jobsMapping[curryId][msg.sender] = jobs.CurryJob(price, jobs.JobStatus.Requested);
+        jobs.createJob(curryId, price);
 
         emit CurryRequested(curryId, msg.sender);
     }

@@ -1,0 +1,4022 @@
+{
+  "contractName": "CurryPayment",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_interfaceId",
+          "type": "bytes4"
+        }
+      ],
+      "name": "supportsInterface",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "name",
+      "outputs": [
+        {
+          "name": "_name",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getApproved",
+      "outputs": [
+        {
+          "name": "_operator",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "approve",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "totalSupply",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "transferFrom",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "name": "_index",
+          "type": "uint256"
+        }
+      ],
+      "name": "tokenOfOwnerByIndex",
+      "outputs": [
+        {
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "safeTransferFrom",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "exists",
+      "outputs": [
+        {
+          "name": "_exists",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_index",
+          "type": "uint256"
+        }
+      ],
+      "name": "tokenByIndex",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "ownerOf",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "symbol",
+      "outputs": [
+        {
+          "name": "_symbol",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_operator",
+          "type": "address"
+        },
+        {
+          "name": "_approved",
+          "type": "bool"
+        }
+      ],
+      "name": "setApprovalForAll",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "name": "_tokenId",
+          "type": "uint256"
+        },
+        {
+          "name": "_data",
+          "type": "bytes"
+        }
+      ],
+      "name": "safeTransferFrom",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "tokenURI",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "name": "_operator",
+          "type": "address"
+        }
+      ],
+      "name": "isApprovedForAll",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "curryId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "customer",
+          "type": "address"
+        }
+      ],
+      "name": "CurryPaid",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "Transfer",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "_approved",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "Approval",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "_operator",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_approved",
+          "type": "bool"
+        }
+      ],
+      "name": "ApprovalForAll",
+      "type": "event"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "curryId",
+          "type": "uint256"
+        }
+      ],
+      "name": "payCurry",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.4.24;\n\nimport \"./Base.sol\";\nimport \"./Jobs.sol\";\nimport \"./Token.sol\";\nimport \"./Profiles.sol\";\n\ncontract CurryPayment is CurryBase {\n    using Jobs for *;\n    using Profiles for *;\n\n    CurryJobs jobs = CurryJobs(msg.sender);\n    CurryToken token = CurryToken(msg.sender);\n    CurryProfiles profiles = CurryProfiles(msg.sender);\n\n    // A curry was paid by a customer\n    event CurryPaid(uint curryId, address customer);\n\n    // After the job is done, pay the curry.\n    function payCurry(uint curryId) public {\n        (, address wallet,) = profiles.getProfile(curryId);\n        (uint price, Jobs.Status status) = jobs.getJob(curryId);\n\n        uint balance = token.balanceOf(msg.sender);\n\n        // The customer must be using the curry to be able to pay\n        require(msg.sender == ownerOf(curryId));\n\n        // The customer must have enough money to pay the curry.\n        require(balance > price);\n\n        // The job status should be In Progress or Awaiting Payment.\n        require(\n            status == Jobs.Status.InProgress ||\n            status == Jobs.Status.AwaitingPayment\n        );\n\n        // Approve the money transfer\n        token.approve(wallet, price);\n\n        // Transfer the money to the curry\n        token.transferFrom(msg.sender, wallet, price);\n\n        // Update the status to Paid\n        jobs.updateJobStatus(msg.sender, Jobs.Status.Paid);\n\n        // TODO: Transition the state from active to completed.\n        emit CurryPaid(curryId, msg.sender);\n    }\n}\n",
+  "sourcePath": "/Users/phoomparin/Projects/curry-chain/contracts/Payment.sol",
+  "ast": {
+    "absolutePath": "/Users/phoomparin/Projects/curry-chain/contracts/Payment.sol",
+    "exportedSymbols": {
+      "CurryPayment": [
+        601
+      ]
+    },
+    "id": 602,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 475,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:4"
+      },
+      {
+        "absolutePath": "/Users/phoomparin/Projects/curry-chain/contracts/Base.sol",
+        "file": "./Base.sol",
+        "id": 476,
+        "nodeType": "ImportDirective",
+        "scope": 602,
+        "sourceUnit": 42,
+        "src": "26:20:4",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/phoomparin/Projects/curry-chain/contracts/Jobs.sol",
+        "file": "./Jobs.sol",
+        "id": 477,
+        "nodeType": "ImportDirective",
+        "scope": 602,
+        "sourceUnit": 417,
+        "src": "47:20:4",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/phoomparin/Projects/curry-chain/contracts/Token.sol",
+        "file": "./Token.sol",
+        "id": 478,
+        "nodeType": "ImportDirective",
+        "scope": 602,
+        "sourceUnit": 969,
+        "src": "68:21:4",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/phoomparin/Projects/curry-chain/contracts/Profiles.sol",
+        "file": "./Profiles.sol",
+        "id": 479,
+        "nodeType": "ImportDirective",
+        "scope": 602,
+        "sourceUnit": 754,
+        "src": "90:24:4",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 480,
+              "name": "CurryBase",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 41,
+              "src": "141:9:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_CurryBase_$41",
+                "typeString": "contract CurryBase"
+              }
+            },
+            "id": 481,
+            "nodeType": "InheritanceSpecifier",
+            "src": "141:9:4"
+          }
+        ],
+        "contractDependencies": [
+          41,
+          978,
+          1174,
+          1194,
+          1201,
+          1311
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 601,
+        "linearizedBaseContracts": [
+          601,
+          41,
+          1201,
+          1194,
+          1174,
+          1311,
+          978
+        ],
+        "name": "CurryPayment",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 483,
+            "libraryName": {
+              "contractScope": null,
+              "id": 482,
+              "name": "Jobs",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 141,
+              "src": "163:4:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Jobs_$141",
+                "typeString": "library Jobs"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "157:17:4",
+            "typeName": null
+          },
+          {
+            "id": 485,
+            "libraryName": {
+              "contractScope": null,
+              "id": 484,
+              "name": "Profiles",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 611,
+              "src": "185:8:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Profiles_$611",
+                "typeString": "library Profiles"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "179:21:4",
+            "typeName": null
+          },
+          {
+            "constant": false,
+            "id": 491,
+            "name": "jobs",
+            "nodeType": "VariableDeclaration",
+            "scope": 601,
+            "src": "206:38:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_CurryJobs_$416",
+              "typeString": "contract CurryJobs"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 486,
+              "name": "CurryJobs",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 416,
+              "src": "206:9:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_CurryJobs_$416",
+                "typeString": "contract CurryJobs"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "arguments": [
+                {
+                  "argumentTypes": null,
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 488,
+                    "name": "msg",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1326,
+                    "src": "233:3:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_magic_message",
+                      "typeString": "msg"
+                    }
+                  },
+                  "id": 489,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": false,
+                  "lValueRequested": false,
+                  "memberName": "sender",
+                  "nodeType": "MemberAccess",
+                  "referencedDeclaration": null,
+                  "src": "233:10:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                ],
+                "id": 487,
+                "name": "CurryJobs",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": 416,
+                "src": "223:9:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_type$_t_contract$_CurryJobs_$416_$",
+                  "typeString": "type(contract CurryJobs)"
+                }
+              },
+              "id": 490,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": false,
+              "kind": "typeConversion",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "223:21:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_CurryJobs_$416",
+                "typeString": "contract CurryJobs"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 497,
+            "name": "token",
+            "nodeType": "VariableDeclaration",
+            "scope": 601,
+            "src": "250:41:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_CurryToken_$968",
+              "typeString": "contract CurryToken"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 492,
+              "name": "CurryToken",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 968,
+              "src": "250:10:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_CurryToken_$968",
+                "typeString": "contract CurryToken"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "arguments": [
+                {
+                  "argumentTypes": null,
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 494,
+                    "name": "msg",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1326,
+                    "src": "280:3:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_magic_message",
+                      "typeString": "msg"
+                    }
+                  },
+                  "id": 495,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": false,
+                  "lValueRequested": false,
+                  "memberName": "sender",
+                  "nodeType": "MemberAccess",
+                  "referencedDeclaration": null,
+                  "src": "280:10:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                ],
+                "id": 493,
+                "name": "CurryToken",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": 968,
+                "src": "269:10:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_type$_t_contract$_CurryToken_$968_$",
+                  "typeString": "type(contract CurryToken)"
+                }
+              },
+              "id": 496,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": false,
+              "kind": "typeConversion",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "269:22:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_CurryToken_$968",
+                "typeString": "contract CurryToken"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 503,
+            "name": "profiles",
+            "nodeType": "VariableDeclaration",
+            "scope": 601,
+            "src": "297:50:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_CurryProfiles_$753",
+              "typeString": "contract CurryProfiles"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 498,
+              "name": "CurryProfiles",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 753,
+              "src": "297:13:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_CurryProfiles_$753",
+                "typeString": "contract CurryProfiles"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "arguments": [
+                {
+                  "argumentTypes": null,
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 500,
+                    "name": "msg",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1326,
+                    "src": "336:3:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_magic_message",
+                      "typeString": "msg"
+                    }
+                  },
+                  "id": 501,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": false,
+                  "lValueRequested": false,
+                  "memberName": "sender",
+                  "nodeType": "MemberAccess",
+                  "referencedDeclaration": null,
+                  "src": "336:10:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                ],
+                "id": 499,
+                "name": "CurryProfiles",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": 753,
+                "src": "322:13:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_type$_t_contract$_CurryProfiles_$753_$",
+                  "typeString": "type(contract CurryProfiles)"
+                }
+              },
+              "id": 502,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": false,
+              "kind": "typeConversion",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "322:25:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_CurryProfiles_$753",
+                "typeString": "contract CurryProfiles"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 509,
+            "name": "CurryPaid",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 508,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 505,
+                  "indexed": false,
+                  "name": "curryId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 509,
+                  "src": "408:12:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 504,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "408:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 507,
+                  "indexed": false,
+                  "name": "customer",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 509,
+                  "src": "422:16:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 506,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "422:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "407:32:4"
+            },
+            "src": "392:48:4"
+          },
+          {
+            "body": {
+              "id": 599,
+              "nodeType": "Block",
+              "src": "530:981:4",
+              "statements": [
+                {
+                  "assignments": [
+                    null,
+                    515,
+                    null
+                  ],
+                  "declarations": [
+                    null,
+                    {
+                      "constant": false,
+                      "id": 515,
+                      "name": "wallet",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 600,
+                      "src": "543:14:4",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      },
+                      "typeName": {
+                        "id": 514,
+                        "name": "address",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "543:7:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    null
+                  ],
+                  "id": 520,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 518,
+                        "name": "curryId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 511,
+                        "src": "582:7:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 516,
+                        "name": "profiles",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 503,
+                        "src": "562:8:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_CurryProfiles_$753",
+                          "typeString": "contract CurryProfiles"
+                        }
+                      },
+                      "id": 517,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "getProfile",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 658,
+                      "src": "562:19:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$_t_uint256_$returns$_t_string_memory_ptr_$_t_address_$_t_uint256_$",
+                        "typeString": "function (uint256) view external returns (string memory,address,uint256)"
+                      }
+                    },
+                    "id": 519,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "562:28:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_string_memory_ptr_$_t_address_$_t_uint256_$",
+                      "typeString": "tuple(string memory,address,uint256)"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "540:50:4"
+                },
+                {
+                  "assignments": [
+                    522,
+                    524
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 522,
+                      "name": "price",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 600,
+                      "src": "601:10:4",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 521,
+                        "name": "uint",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "601:4:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    {
+                      "constant": false,
+                      "id": 524,
+                      "name": "status",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 600,
+                      "src": "613:18:4",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_Status_$140",
+                        "typeString": "enum Jobs.Status"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 523,
+                        "name": "Jobs.Status",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 140,
+                        "src": "613:11:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_enum$_Status_$140",
+                          "typeString": "enum Jobs.Status"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 529,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 527,
+                        "name": "curryId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 511,
+                        "src": "647:7:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 525,
+                        "name": "jobs",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 491,
+                        "src": "635:4:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_CurryJobs_$416",
+                          "typeString": "contract CurryJobs"
+                        }
+                      },
+                      "id": 526,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "getJob",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 235,
+                      "src": "635:11:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$_t_uint256_$returns$_t_uint256_$_t_enum$_Status_$140_$",
+                        "typeString": "function (uint256) view external returns (uint256,enum Jobs.Status)"
+                      }
+                    },
+                    "id": 528,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "635:20:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_uint256_$_t_enum$_Status_$140_$",
+                      "typeString": "tuple(uint256,enum Jobs.Status)"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "600:55:4"
+                },
+                {
+                  "assignments": [
+                    531
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 531,
+                      "name": "balance",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 600,
+                      "src": "666:12:4",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 530,
+                        "name": "uint",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "666:4:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 537,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 534,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1326,
+                          "src": "697:3:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 535,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "697:10:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 532,
+                        "name": "token",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 497,
+                        "src": "681:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_CurryToken_$968",
+                          "typeString": "contract CurryToken"
+                        }
+                      },
+                      "id": 533,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "balanceOf",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 811,
+                      "src": "681:15:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_uint256_$",
+                        "typeString": "function (address) view external returns (uint256)"
+                      }
+                    },
+                    "id": 536,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "681:27:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "666:42:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 544,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 539,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1326,
+                            "src": "793:3:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 540,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "793:10:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 542,
+                              "name": "curryId",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 511,
+                              "src": "815:7:4",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            ],
+                            "id": 541,
+                            "name": "ownerOf",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [
+                              40
+                            ],
+                            "referencedDeclaration": 40,
+                            "src": "807:7:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_internal_view$_t_uint256_$returns$_t_address_$",
+                              "typeString": "function (uint256) view returns (address)"
+                            }
+                          },
+                          "id": 543,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "807:16:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "src": "793:30:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 538,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        1329,
+                        1330
+                      ],
+                      "referencedDeclaration": 1329,
+                      "src": "785:7:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 545,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "785:39:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 546,
+                  "nodeType": "ExpressionStatement",
+                  "src": "785:39:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 550,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 548,
+                          "name": "balance",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 531,
+                          "src": "908:7:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": ">",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "id": 549,
+                          "name": "price",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 522,
+                          "src": "918:5:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "src": "908:15:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 547,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        1329,
+                        1330
+                      ],
+                      "referencedDeclaration": 1329,
+                      "src": "900:7:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 551,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "900:24:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 552,
+                  "nodeType": "ExpressionStatement",
+                  "src": "900:24:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        "id": 564,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_enum$_Status_$140",
+                            "typeString": "enum Jobs.Status"
+                          },
+                          "id": 558,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "argumentTypes": null,
+                            "id": 554,
+                            "name": "status",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 524,
+                            "src": "1025:6:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_enum$_Status_$140",
+                              "typeString": "enum Jobs.Status"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": "==",
+                          "rightExpression": {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "expression": {
+                                "argumentTypes": null,
+                                "id": 555,
+                                "name": "Jobs",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 141,
+                                "src": "1035:4:4",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_type$_t_contract$_Jobs_$141_$",
+                                  "typeString": "type(library Jobs)"
+                                }
+                              },
+                              "id": 556,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberName": "Status",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": 140,
+                              "src": "1035:11:4",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_enum$_Status_$140_$",
+                                "typeString": "type(enum Jobs.Status)"
+                              }
+                            },
+                            "id": 557,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "memberName": "InProgress",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "1035:22:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_enum$_Status_$140",
+                              "typeString": "enum Jobs.Status"
+                            }
+                          },
+                          "src": "1025:32:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "||",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_enum$_Status_$140",
+                            "typeString": "enum Jobs.Status"
+                          },
+                          "id": 563,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "argumentTypes": null,
+                            "id": 559,
+                            "name": "status",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 524,
+                            "src": "1073:6:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_enum$_Status_$140",
+                              "typeString": "enum Jobs.Status"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": "==",
+                          "rightExpression": {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "expression": {
+                                "argumentTypes": null,
+                                "id": 560,
+                                "name": "Jobs",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 141,
+                                "src": "1083:4:4",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_type$_t_contract$_Jobs_$141_$",
+                                  "typeString": "type(library Jobs)"
+                                }
+                              },
+                              "id": 561,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberName": "Status",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": 140,
+                              "src": "1083:11:4",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_enum$_Status_$140_$",
+                                "typeString": "type(enum Jobs.Status)"
+                              }
+                            },
+                            "id": 562,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "memberName": "AwaitingPayment",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "1083:27:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_enum$_Status_$140",
+                              "typeString": "enum Jobs.Status"
+                            }
+                          },
+                          "src": "1073:37:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "src": "1025:85:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 553,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        1329,
+                        1330
+                      ],
+                      "referencedDeclaration": 1329,
+                      "src": "1004:7:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 565,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1004:116:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 566,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1004:116:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 570,
+                        "name": "wallet",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 515,
+                        "src": "1183:6:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 571,
+                        "name": "price",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 522,
+                        "src": "1191:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 567,
+                        "name": "token",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 497,
+                        "src": "1169:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_CurryToken_$968",
+                          "typeString": "contract CurryToken"
+                        }
+                      },
+                      "id": 569,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "approve",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 967,
+                      "src": "1169:13:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_uint256_$returns$_t_bool_$",
+                        "typeString": "function (address,uint256) external returns (bool)"
+                      }
+                    },
+                    "id": 572,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1169:28:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 573,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1169:28:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 577,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1326,
+                          "src": "1270:3:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 578,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "1270:10:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 579,
+                        "name": "wallet",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 515,
+                        "src": "1282:6:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 580,
+                        "name": "price",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 522,
+                        "src": "1290:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 574,
+                        "name": "token",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 497,
+                        "src": "1251:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_CurryToken_$968",
+                          "typeString": "contract CurryToken"
+                        }
+                      },
+                      "id": 576,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "transferFrom",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 939,
+                      "src": "1251:18:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$_t_bool_$",
+                        "typeString": "function (address,address,uint256) external returns (bool)"
+                      }
+                    },
+                    "id": 581,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1251:45:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 582,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1251:45:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 586,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1326,
+                          "src": "1365:3:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 587,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "1365:10:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 588,
+                            "name": "Jobs",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 141,
+                            "src": "1377:4:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_contract$_Jobs_$141_$",
+                              "typeString": "type(library Jobs)"
+                            }
+                          },
+                          "id": 589,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "Status",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 140,
+                          "src": "1377:11:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_enum$_Status_$140_$",
+                            "typeString": "type(enum Jobs.Status)"
+                          }
+                        },
+                        "id": 590,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "memberName": "Paid",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "1377:16:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_enum$_Status_$140",
+                          "typeString": "enum Jobs.Status"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_enum$_Status_$140",
+                          "typeString": "enum Jobs.Status"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 583,
+                        "name": "jobs",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 491,
+                        "src": "1344:4:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_CurryJobs_$416",
+                          "typeString": "contract CurryJobs"
+                        }
+                      },
+                      "id": 585,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "updateJobStatus",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 325,
+                      "src": "1344:20:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_enum$_Status_$140_$returns$__$",
+                        "typeString": "function (address,enum Jobs.Status) external"
+                      }
+                    },
+                    "id": 591,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1344:50:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 592,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1344:50:4"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 594,
+                        "name": "curryId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 511,
+                        "src": "1484:7:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 595,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1326,
+                          "src": "1493:3:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 596,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "1493:10:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 593,
+                      "name": "CurryPaid",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 509,
+                      "src": "1474:9:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_address_$returns$__$",
+                        "typeString": "function (uint256,address)"
+                      }
+                    },
+                    "id": 597,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1474:30:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 598,
+                  "nodeType": "EmitStatement",
+                  "src": "1469:35:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 600,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "payCurry",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 512,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 511,
+                  "name": "curryId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 600,
+                  "src": "509:12:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 510,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "509:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "508:14:4"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 513,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "530:0:4"
+            },
+            "scope": 601,
+            "src": "491:1020:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 602,
+        "src": "116:1397:4"
+      }
+    ],
+    "src": "0:1514:4"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/phoomparin/Projects/curry-chain/contracts/Payment.sol",
+    "exportedSymbols": {
+      "CurryPayment": [
+        601
+      ]
+    },
+    "id": 602,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 475,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:4"
+      },
+      {
+        "absolutePath": "/Users/phoomparin/Projects/curry-chain/contracts/Base.sol",
+        "file": "./Base.sol",
+        "id": 476,
+        "nodeType": "ImportDirective",
+        "scope": 602,
+        "sourceUnit": 42,
+        "src": "26:20:4",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/phoomparin/Projects/curry-chain/contracts/Jobs.sol",
+        "file": "./Jobs.sol",
+        "id": 477,
+        "nodeType": "ImportDirective",
+        "scope": 602,
+        "sourceUnit": 417,
+        "src": "47:20:4",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/phoomparin/Projects/curry-chain/contracts/Token.sol",
+        "file": "./Token.sol",
+        "id": 478,
+        "nodeType": "ImportDirective",
+        "scope": 602,
+        "sourceUnit": 969,
+        "src": "68:21:4",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/phoomparin/Projects/curry-chain/contracts/Profiles.sol",
+        "file": "./Profiles.sol",
+        "id": 479,
+        "nodeType": "ImportDirective",
+        "scope": 602,
+        "sourceUnit": 754,
+        "src": "90:24:4",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 480,
+              "name": "CurryBase",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 41,
+              "src": "141:9:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_CurryBase_$41",
+                "typeString": "contract CurryBase"
+              }
+            },
+            "id": 481,
+            "nodeType": "InheritanceSpecifier",
+            "src": "141:9:4"
+          }
+        ],
+        "contractDependencies": [
+          41,
+          978,
+          1174,
+          1194,
+          1201,
+          1311
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 601,
+        "linearizedBaseContracts": [
+          601,
+          41,
+          1201,
+          1194,
+          1174,
+          1311,
+          978
+        ],
+        "name": "CurryPayment",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 483,
+            "libraryName": {
+              "contractScope": null,
+              "id": 482,
+              "name": "Jobs",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 141,
+              "src": "163:4:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Jobs_$141",
+                "typeString": "library Jobs"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "157:17:4",
+            "typeName": null
+          },
+          {
+            "id": 485,
+            "libraryName": {
+              "contractScope": null,
+              "id": 484,
+              "name": "Profiles",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 611,
+              "src": "185:8:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Profiles_$611",
+                "typeString": "library Profiles"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "179:21:4",
+            "typeName": null
+          },
+          {
+            "constant": false,
+            "id": 491,
+            "name": "jobs",
+            "nodeType": "VariableDeclaration",
+            "scope": 601,
+            "src": "206:38:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_CurryJobs_$416",
+              "typeString": "contract CurryJobs"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 486,
+              "name": "CurryJobs",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 416,
+              "src": "206:9:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_CurryJobs_$416",
+                "typeString": "contract CurryJobs"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "arguments": [
+                {
+                  "argumentTypes": null,
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 488,
+                    "name": "msg",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1326,
+                    "src": "233:3:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_magic_message",
+                      "typeString": "msg"
+                    }
+                  },
+                  "id": 489,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": false,
+                  "lValueRequested": false,
+                  "memberName": "sender",
+                  "nodeType": "MemberAccess",
+                  "referencedDeclaration": null,
+                  "src": "233:10:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                ],
+                "id": 487,
+                "name": "CurryJobs",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": 416,
+                "src": "223:9:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_type$_t_contract$_CurryJobs_$416_$",
+                  "typeString": "type(contract CurryJobs)"
+                }
+              },
+              "id": 490,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": false,
+              "kind": "typeConversion",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "223:21:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_CurryJobs_$416",
+                "typeString": "contract CurryJobs"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 497,
+            "name": "token",
+            "nodeType": "VariableDeclaration",
+            "scope": 601,
+            "src": "250:41:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_CurryToken_$968",
+              "typeString": "contract CurryToken"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 492,
+              "name": "CurryToken",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 968,
+              "src": "250:10:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_CurryToken_$968",
+                "typeString": "contract CurryToken"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "arguments": [
+                {
+                  "argumentTypes": null,
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 494,
+                    "name": "msg",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1326,
+                    "src": "280:3:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_magic_message",
+                      "typeString": "msg"
+                    }
+                  },
+                  "id": 495,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": false,
+                  "lValueRequested": false,
+                  "memberName": "sender",
+                  "nodeType": "MemberAccess",
+                  "referencedDeclaration": null,
+                  "src": "280:10:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                ],
+                "id": 493,
+                "name": "CurryToken",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": 968,
+                "src": "269:10:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_type$_t_contract$_CurryToken_$968_$",
+                  "typeString": "type(contract CurryToken)"
+                }
+              },
+              "id": 496,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": false,
+              "kind": "typeConversion",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "269:22:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_CurryToken_$968",
+                "typeString": "contract CurryToken"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 503,
+            "name": "profiles",
+            "nodeType": "VariableDeclaration",
+            "scope": 601,
+            "src": "297:50:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_CurryProfiles_$753",
+              "typeString": "contract CurryProfiles"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 498,
+              "name": "CurryProfiles",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 753,
+              "src": "297:13:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_CurryProfiles_$753",
+                "typeString": "contract CurryProfiles"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "arguments": [
+                {
+                  "argumentTypes": null,
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 500,
+                    "name": "msg",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1326,
+                    "src": "336:3:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_magic_message",
+                      "typeString": "msg"
+                    }
+                  },
+                  "id": 501,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": false,
+                  "lValueRequested": false,
+                  "memberName": "sender",
+                  "nodeType": "MemberAccess",
+                  "referencedDeclaration": null,
+                  "src": "336:10:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                ],
+                "id": 499,
+                "name": "CurryProfiles",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": 753,
+                "src": "322:13:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_type$_t_contract$_CurryProfiles_$753_$",
+                  "typeString": "type(contract CurryProfiles)"
+                }
+              },
+              "id": 502,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": false,
+              "kind": "typeConversion",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "322:25:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_CurryProfiles_$753",
+                "typeString": "contract CurryProfiles"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 509,
+            "name": "CurryPaid",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 508,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 505,
+                  "indexed": false,
+                  "name": "curryId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 509,
+                  "src": "408:12:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 504,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "408:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 507,
+                  "indexed": false,
+                  "name": "customer",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 509,
+                  "src": "422:16:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 506,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "422:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "407:32:4"
+            },
+            "src": "392:48:4"
+          },
+          {
+            "body": {
+              "id": 599,
+              "nodeType": "Block",
+              "src": "530:981:4",
+              "statements": [
+                {
+                  "assignments": [
+                    null,
+                    515,
+                    null
+                  ],
+                  "declarations": [
+                    null,
+                    {
+                      "constant": false,
+                      "id": 515,
+                      "name": "wallet",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 600,
+                      "src": "543:14:4",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      },
+                      "typeName": {
+                        "id": 514,
+                        "name": "address",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "543:7:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    null
+                  ],
+                  "id": 520,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 518,
+                        "name": "curryId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 511,
+                        "src": "582:7:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 516,
+                        "name": "profiles",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 503,
+                        "src": "562:8:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_CurryProfiles_$753",
+                          "typeString": "contract CurryProfiles"
+                        }
+                      },
+                      "id": 517,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "getProfile",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 658,
+                      "src": "562:19:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$_t_uint256_$returns$_t_string_memory_ptr_$_t_address_$_t_uint256_$",
+                        "typeString": "function (uint256) view external returns (string memory,address,uint256)"
+                      }
+                    },
+                    "id": 519,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "562:28:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_string_memory_ptr_$_t_address_$_t_uint256_$",
+                      "typeString": "tuple(string memory,address,uint256)"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "540:50:4"
+                },
+                {
+                  "assignments": [
+                    522,
+                    524
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 522,
+                      "name": "price",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 600,
+                      "src": "601:10:4",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 521,
+                        "name": "uint",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "601:4:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    {
+                      "constant": false,
+                      "id": 524,
+                      "name": "status",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 600,
+                      "src": "613:18:4",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_Status_$140",
+                        "typeString": "enum Jobs.Status"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 523,
+                        "name": "Jobs.Status",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 140,
+                        "src": "613:11:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_enum$_Status_$140",
+                          "typeString": "enum Jobs.Status"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 529,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 527,
+                        "name": "curryId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 511,
+                        "src": "647:7:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 525,
+                        "name": "jobs",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 491,
+                        "src": "635:4:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_CurryJobs_$416",
+                          "typeString": "contract CurryJobs"
+                        }
+                      },
+                      "id": 526,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "getJob",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 235,
+                      "src": "635:11:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$_t_uint256_$returns$_t_uint256_$_t_enum$_Status_$140_$",
+                        "typeString": "function (uint256) view external returns (uint256,enum Jobs.Status)"
+                      }
+                    },
+                    "id": 528,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "635:20:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_uint256_$_t_enum$_Status_$140_$",
+                      "typeString": "tuple(uint256,enum Jobs.Status)"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "600:55:4"
+                },
+                {
+                  "assignments": [
+                    531
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 531,
+                      "name": "balance",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 600,
+                      "src": "666:12:4",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 530,
+                        "name": "uint",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "666:4:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 537,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 534,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1326,
+                          "src": "697:3:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 535,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "697:10:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 532,
+                        "name": "token",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 497,
+                        "src": "681:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_CurryToken_$968",
+                          "typeString": "contract CurryToken"
+                        }
+                      },
+                      "id": 533,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "balanceOf",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 811,
+                      "src": "681:15:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_uint256_$",
+                        "typeString": "function (address) view external returns (uint256)"
+                      }
+                    },
+                    "id": 536,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "681:27:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "666:42:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 544,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 539,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1326,
+                            "src": "793:3:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 540,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "793:10:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 542,
+                              "name": "curryId",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 511,
+                              "src": "815:7:4",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            ],
+                            "id": 541,
+                            "name": "ownerOf",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [
+                              40
+                            ],
+                            "referencedDeclaration": 40,
+                            "src": "807:7:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_internal_view$_t_uint256_$returns$_t_address_$",
+                              "typeString": "function (uint256) view returns (address)"
+                            }
+                          },
+                          "id": 543,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "807:16:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "src": "793:30:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 538,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        1329,
+                        1330
+                      ],
+                      "referencedDeclaration": 1329,
+                      "src": "785:7:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 545,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "785:39:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 546,
+                  "nodeType": "ExpressionStatement",
+                  "src": "785:39:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 550,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 548,
+                          "name": "balance",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 531,
+                          "src": "908:7:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": ">",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "id": 549,
+                          "name": "price",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 522,
+                          "src": "918:5:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "src": "908:15:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 547,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        1329,
+                        1330
+                      ],
+                      "referencedDeclaration": 1329,
+                      "src": "900:7:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 551,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "900:24:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 552,
+                  "nodeType": "ExpressionStatement",
+                  "src": "900:24:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        "id": 564,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_enum$_Status_$140",
+                            "typeString": "enum Jobs.Status"
+                          },
+                          "id": 558,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "argumentTypes": null,
+                            "id": 554,
+                            "name": "status",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 524,
+                            "src": "1025:6:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_enum$_Status_$140",
+                              "typeString": "enum Jobs.Status"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": "==",
+                          "rightExpression": {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "expression": {
+                                "argumentTypes": null,
+                                "id": 555,
+                                "name": "Jobs",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 141,
+                                "src": "1035:4:4",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_type$_t_contract$_Jobs_$141_$",
+                                  "typeString": "type(library Jobs)"
+                                }
+                              },
+                              "id": 556,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberName": "Status",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": 140,
+                              "src": "1035:11:4",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_enum$_Status_$140_$",
+                                "typeString": "type(enum Jobs.Status)"
+                              }
+                            },
+                            "id": 557,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "memberName": "InProgress",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "1035:22:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_enum$_Status_$140",
+                              "typeString": "enum Jobs.Status"
+                            }
+                          },
+                          "src": "1025:32:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "||",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_enum$_Status_$140",
+                            "typeString": "enum Jobs.Status"
+                          },
+                          "id": 563,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "argumentTypes": null,
+                            "id": 559,
+                            "name": "status",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 524,
+                            "src": "1073:6:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_enum$_Status_$140",
+                              "typeString": "enum Jobs.Status"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": "==",
+                          "rightExpression": {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "expression": {
+                                "argumentTypes": null,
+                                "id": 560,
+                                "name": "Jobs",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 141,
+                                "src": "1083:4:4",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_type$_t_contract$_Jobs_$141_$",
+                                  "typeString": "type(library Jobs)"
+                                }
+                              },
+                              "id": 561,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberName": "Status",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": 140,
+                              "src": "1083:11:4",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_enum$_Status_$140_$",
+                                "typeString": "type(enum Jobs.Status)"
+                              }
+                            },
+                            "id": 562,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "memberName": "AwaitingPayment",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "1083:27:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_enum$_Status_$140",
+                              "typeString": "enum Jobs.Status"
+                            }
+                          },
+                          "src": "1073:37:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "src": "1025:85:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 553,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        1329,
+                        1330
+                      ],
+                      "referencedDeclaration": 1329,
+                      "src": "1004:7:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 565,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1004:116:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 566,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1004:116:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 570,
+                        "name": "wallet",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 515,
+                        "src": "1183:6:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 571,
+                        "name": "price",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 522,
+                        "src": "1191:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 567,
+                        "name": "token",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 497,
+                        "src": "1169:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_CurryToken_$968",
+                          "typeString": "contract CurryToken"
+                        }
+                      },
+                      "id": 569,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "approve",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 967,
+                      "src": "1169:13:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_uint256_$returns$_t_bool_$",
+                        "typeString": "function (address,uint256) external returns (bool)"
+                      }
+                    },
+                    "id": 572,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1169:28:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 573,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1169:28:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 577,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1326,
+                          "src": "1270:3:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 578,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "1270:10:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 579,
+                        "name": "wallet",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 515,
+                        "src": "1282:6:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 580,
+                        "name": "price",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 522,
+                        "src": "1290:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 574,
+                        "name": "token",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 497,
+                        "src": "1251:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_CurryToken_$968",
+                          "typeString": "contract CurryToken"
+                        }
+                      },
+                      "id": 576,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "transferFrom",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 939,
+                      "src": "1251:18:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$_t_bool_$",
+                        "typeString": "function (address,address,uint256) external returns (bool)"
+                      }
+                    },
+                    "id": 581,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1251:45:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 582,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1251:45:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 586,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1326,
+                          "src": "1365:3:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 587,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "1365:10:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 588,
+                            "name": "Jobs",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 141,
+                            "src": "1377:4:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_contract$_Jobs_$141_$",
+                              "typeString": "type(library Jobs)"
+                            }
+                          },
+                          "id": 589,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "Status",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 140,
+                          "src": "1377:11:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_enum$_Status_$140_$",
+                            "typeString": "type(enum Jobs.Status)"
+                          }
+                        },
+                        "id": 590,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "memberName": "Paid",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "1377:16:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_enum$_Status_$140",
+                          "typeString": "enum Jobs.Status"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_enum$_Status_$140",
+                          "typeString": "enum Jobs.Status"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 583,
+                        "name": "jobs",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 491,
+                        "src": "1344:4:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_CurryJobs_$416",
+                          "typeString": "contract CurryJobs"
+                        }
+                      },
+                      "id": 585,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "updateJobStatus",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 325,
+                      "src": "1344:20:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_enum$_Status_$140_$returns$__$",
+                        "typeString": "function (address,enum Jobs.Status) external"
+                      }
+                    },
+                    "id": 591,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1344:50:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 592,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1344:50:4"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 594,
+                        "name": "curryId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 511,
+                        "src": "1484:7:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 595,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1326,
+                          "src": "1493:3:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 596,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "1493:10:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 593,
+                      "name": "CurryPaid",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 509,
+                      "src": "1474:9:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_address_$returns$__$",
+                        "typeString": "function (uint256,address)"
+                      }
+                    },
+                    "id": 597,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1474:30:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 598,
+                  "nodeType": "EmitStatement",
+                  "src": "1469:35:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 600,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "payCurry",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 512,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 511,
+                  "name": "curryId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 600,
+                  "src": "509:12:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 510,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "509:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "508:14:4"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 513,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "530:0:4"
+            },
+            "scope": 601,
+            "src": "491:1020:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 602,
+        "src": "116:1397:4"
+      }
+    ],
+    "src": "0:1514:4"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2018-07-29T13:43:23.416Z"
+}

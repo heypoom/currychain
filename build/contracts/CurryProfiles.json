@@ -1,0 +1,3880 @@
+{
+  "contractName": "CurryProfiles",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "curryList",
+      "outputs": [
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "wallet",
+          "type": "address"
+        },
+        {
+          "name": "rank",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "curryId",
+          "type": "uint256"
+        }
+      ],
+      "name": "Registered",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "curryId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "newAddress",
+          "type": "address"
+        }
+      ],
+      "name": "AddressUpdated",
+      "type": "event"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "curryId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getProfile",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        },
+        {
+          "name": "",
+          "type": "address"
+        },
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getCurryId",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "price",
+          "type": "uint256"
+        }
+      ],
+      "name": "registerAsCurry",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "newAddress",
+          "type": "address"
+        }
+      ],
+      "name": "updateAddressAsCurry",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b506109c7806100206000396000f30060806040526004361061006d576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680631634f368146100725780633ca0764b14610152578063a43891f014610195578063f08f4f641461021c578063fb73bd40146102fc575b600080fd5b34801561007e57600080fd5b5061009d60048036038101908080359060200190929190505050610327565b60405180806020018473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001838152602001828103825285818151815260200191508051906020019080838360005b838110156101155780820151818401526020810190506100fa565b50505050905090810190601f1680156101425780820380516001836020036101000a031916815260200191505b5094505050505060405180910390f35b34801561015e57600080fd5b50610193600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610418565b005b3480156101a157600080fd5b50610206600480360381019080803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509192919290803590602001909291905050506105b6565b6040518082815260200191505060405180910390f35b34801561022857600080fd5b506102476004803603810190808035906020019092919050505061071d565b60405180806020018473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001838152602001828103825285818151815260200191508051906020019080838360005b838110156102bf5780820151818401526020810190506102a4565b50505050905090810190601f1680156102ec5780820380516001836020036101000a031916815260200191505b5094505050505060405180910390f35b34801561030857600080fd5b50610311610877565b6040518082815260200191505060405180910390f35b60008181548110151561033657fe5b9060005260206000209060030201600091509050806000018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156103e25780601f106103b7576101008083540402835291602001916103e2565b820191906000526020600020905b8154815290600101906020018083116103c557829003601f168201915b5050505050908060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16908060020154905083565b600080339150600160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205490508260008281548110151561047057fe5b906000526020600020906003020160010160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555080600160008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002081905550600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600090557fd76cf56013f9d9167ee3a9739d9e42b1b59ff45f7ff1726594b82f5eccca2c288184604051808381526020018273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019250505060405180910390a1505050565b60006105c06108be565b60006060604051908101604052808681526020013373ffffffffffffffffffffffffffffffffffffffff168152602001600081525091506000829080600181540180825580915050906001820390600052602060002090600302016000909192909190915060008201518160000190805190602001906106419291906108f6565b5060208201518160010160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550604082015181600201555050905080600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020819055507f1fcb8fd4a09d0facf37b6e1cd47a0cce5aa0b069a1d3d5bd9c223220fa1f5a1c816040518082815260200191505060405180910390a1809250505092915050565b606060008061072a6108be565b60008581548110151561073957fe5b906000526020600020906003020160606040519081016040529081600082018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156107ec5780601f106107c1576101008083540402835291602001916107ec565b820191906000526020600020905b8154815290600101906020018083116107cf57829003601f168201915b505050505081526020016001820160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020016002820154815250509050806000015181602001518260400151829250935093509350509193909250565b6000600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054905090565b60606040519081016040528060608152602001600073ffffffffffffffffffffffffffffffffffffffff168152602001600081525090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061093757805160ff1916838001178555610965565b82800160010185558215610965579182015b82811115610964578251825591602001919060010190610949565b5b5090506109729190610976565b5090565b61099891905b8082111561099457600081600090555060010161097c565b5090565b905600a165627a7a7230582065a1b32d7931971ad5fd460eadf35411a86544015f94c9002076122c49ef184a0029",
+  "deployedBytecode": "0x60806040526004361061006d576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680631634f368146100725780633ca0764b14610152578063a43891f014610195578063f08f4f641461021c578063fb73bd40146102fc575b600080fd5b34801561007e57600080fd5b5061009d60048036038101908080359060200190929190505050610327565b60405180806020018473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001838152602001828103825285818151815260200191508051906020019080838360005b838110156101155780820151818401526020810190506100fa565b50505050905090810190601f1680156101425780820380516001836020036101000a031916815260200191505b5094505050505060405180910390f35b34801561015e57600080fd5b50610193600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610418565b005b3480156101a157600080fd5b50610206600480360381019080803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509192919290803590602001909291905050506105b6565b6040518082815260200191505060405180910390f35b34801561022857600080fd5b506102476004803603810190808035906020019092919050505061071d565b60405180806020018473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001838152602001828103825285818151815260200191508051906020019080838360005b838110156102bf5780820151818401526020810190506102a4565b50505050905090810190601f1680156102ec5780820380516001836020036101000a031916815260200191505b5094505050505060405180910390f35b34801561030857600080fd5b50610311610877565b6040518082815260200191505060405180910390f35b60008181548110151561033657fe5b9060005260206000209060030201600091509050806000018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156103e25780601f106103b7576101008083540402835291602001916103e2565b820191906000526020600020905b8154815290600101906020018083116103c557829003601f168201915b5050505050908060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16908060020154905083565b600080339150600160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205490508260008281548110151561047057fe5b906000526020600020906003020160010160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555080600160008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002081905550600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600090557fd76cf56013f9d9167ee3a9739d9e42b1b59ff45f7ff1726594b82f5eccca2c288184604051808381526020018273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019250505060405180910390a1505050565b60006105c06108be565b60006060604051908101604052808681526020013373ffffffffffffffffffffffffffffffffffffffff168152602001600081525091506000829080600181540180825580915050906001820390600052602060002090600302016000909192909190915060008201518160000190805190602001906106419291906108f6565b5060208201518160010160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550604082015181600201555050905080600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020819055507f1fcb8fd4a09d0facf37b6e1cd47a0cce5aa0b069a1d3d5bd9c223220fa1f5a1c816040518082815260200191505060405180910390a1809250505092915050565b606060008061072a6108be565b60008581548110151561073957fe5b906000526020600020906003020160606040519081016040529081600082018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156107ec5780601f106107c1576101008083540402835291602001916107ec565b820191906000526020600020905b8154815290600101906020018083116107cf57829003601f168201915b505050505081526020016001820160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020016002820154815250509050806000015181602001518260400151829250935093509350509193909250565b6000600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054905090565b60606040519081016040528060608152602001600073ffffffffffffffffffffffffffffffffffffffff168152602001600081525090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061093757805160ff1916838001178555610965565b82800160010185558215610965579182015b82811115610964578251825591602001919060010190610949565b5b5090506109729190610976565b5090565b61099891905b8082111561099457600081600090555060010161097c565b5090565b905600a165627a7a7230582065a1b32d7931971ad5fd460eadf35411a86544015f94c9002076122c49ef184a0029",
+  "sourceMap": "176:1705:5:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;176:1705:5;;;;;;;",
+  "deployedSourceMap": "176:1705:5:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;431:35;;8:9:-1;5:2;;;30:1;27;20:12;5:2;431:35:5;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;431:35:5;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1377:502;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1377:502:5;;;;;;;;;;;;;;;;;;;;;;;;;;;;897:430;;8:9:-1;5:2;;;30:1;27;20:12;5:2;897:430:5;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;554:205;;8:9:-1;5:2;;;30:1;27;20:12;5:2;554:205:5;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;554:205:5;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;765:99;;8:9:-1;5:2;;;30:1;27;20:12;5:2;765:99:5;;;;;;;;;;;;;;;;;;;;;;;431:35;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;1377:502::-;1444:22;1544:7;1469:10;1444:35;;1554:14;:30;1569:14;1554:30;;;;;;;;;;;;;;;;1544:40;;1617:10;1594:9;1604:2;1594:13;;;;;;;;;;;;;;;;;;;;:20;;;:33;;;;;;;;;;;;;;;;;;1724:2;1695:14;:26;1710:10;1695:26;;;;;;;;;;;;;;;:31;;;;1800:14;:26;1815:10;1800:26;;;;;;;;;;;;;;;1793:33;;;1842:30;1857:2;1861:10;1842:30;;;;;;;;;;;;;;;;;;;;;;;;;;;;1377:502;;;:::o;897:430::-;967:4;1019:29;;:::i;:::-;1140:7;1051:37;;;;;;;;;1068:4;1051:37;;;;1074:10;1051:37;;;;;;1086:1;1051:37;;;1019:69;;1150:9;1165:5;1150:21;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;1150:21:5;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1140:31;;1268:2;1239:14;:26;1254:10;1239:26;;;;;;;;;;;;;;;:31;;;;1286:14;1297:2;1286:14;;;;;;;;;;;;;;;;;;1318:2;1311:9;;897:430;;;;;;:::o;554:205::-;613:6;621:7;630:4;646:29;;:::i;:::-;678:9;688:7;678:18;;;;;;;;;;;;;;;;;;;;646:50;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;715:5;:10;;;727:5;:12;;;741:5;:10;;;707:45;;;;;;;;;554:205;;;;;;:::o;765:99::-;808:4;831:14;:26;846:10;831:26;;;;;;;;;;;;;;;;824:33;;765:99;:::o;176:1705::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.4.24;\n\nlibrary Profiles {\n    // Personal Profile of the curry\n    struct Profile {\n        string name;\n        address wallet;\n        uint rank;\n    }\n}\n\ncontract CurryProfiles {\n    using Profiles for *;\n\n    // A curry has registered.\n    event Registered(uint curryId);\n\n    // A curry has updated their wallet address.\n    event AddressUpdated(uint curryId, address newAddress);\n\n    // List of Curry\n    Profiles.Profile[] public curryList;\n\n    // Contract Mappings of Curry\n    mapping (address => uint) addressToCurry;\n\n    function getProfile(uint curryId)\n    public view returns (string, address, uint) {\n        Profiles.Profile memory curry = curryList[curryId];\n\n        return (curry.name, curry.wallet, curry.rank);\n    }\n\n    function getCurryId() public view returns (uint) {\n        return addressToCurry[msg.sender];\n    }\n\n    // Register as a curry\n    function registerAsCurry(string name, uint price)\n    public returns (uint) {\n        // Create the Curry Profile\n        Profiles.Profile memory curry = Profiles.Profile(name, msg.sender, 0);\n\n        // Adds the profile to curryList\n        uint id = curryList.push(curry);\n\n        // Assigns your wallet address to addressToCurry\n        addressToCurry[msg.sender] = id;\n\n        emit Registered(id);\n\n        return id;\n    }\n\n    // Update the wallet address as a curry\n    function updateAddressAsCurry(address newAddress) public {\n        address currentAddress = msg.sender;\n\n        // Set the new wallet address in Profile List\n        uint id = addressToCurry[currentAddress];\n        curryList[id].wallet = newAddress;\n\n        // Set the new wallet address to your Profile ID\n        addressToCurry[newAddress] = id;\n\n        // Remove the old wallet address from the list.\n        delete addressToCurry[msg.sender];\n\n        emit AddressUpdated(id, newAddress);\n    }\n}\n",
+  "sourcePath": "/Users/phoomparin/Projects/curry-chain/contracts/Profiles.sol",
+  "ast": {
+    "absolutePath": "/Users/phoomparin/Projects/curry-chain/contracts/Profiles.sol",
+    "exportedSymbols": {
+      "CurryProfiles": [
+        753
+      ],
+      "Profiles": [
+        611
+      ]
+    },
+    "id": 754,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 603,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:5"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 611,
+        "linearizedBaseContracts": [
+          611
+        ],
+        "name": "Profiles",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Profiles.Profile",
+            "id": 610,
+            "members": [
+              {
+                "constant": false,
+                "id": 605,
+                "name": "name",
+                "nodeType": "VariableDeclaration",
+                "scope": 610,
+                "src": "111:11:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 604,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "111:6:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 607,
+                "name": "wallet",
+                "nodeType": "VariableDeclaration",
+                "scope": 610,
+                "src": "132:14:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 606,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "132:7:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 609,
+                "name": "rank",
+                "nodeType": "VariableDeclaration",
+                "scope": 610,
+                "src": "156:9:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 608,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "156:4:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Profile",
+            "nodeType": "StructDefinition",
+            "scope": 611,
+            "src": "86:86:5",
+            "visibility": "public"
+          }
+        ],
+        "scope": 754,
+        "src": "26:148:5"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 753,
+        "linearizedBaseContracts": [
+          753
+        ],
+        "name": "CurryProfiles",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 613,
+            "libraryName": {
+              "contractScope": null,
+              "id": 612,
+              "name": "Profiles",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 611,
+              "src": "211:8:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Profiles_$611",
+                "typeString": "library Profiles"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "205:21:5",
+            "typeName": null
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 617,
+            "name": "Registered",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 616,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 615,
+                  "indexed": false,
+                  "name": "curryId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 617,
+                  "src": "280:12:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 614,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "280:4:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "279:14:5"
+            },
+            "src": "263:31:5"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 623,
+            "name": "AddressUpdated",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 622,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 619,
+                  "indexed": false,
+                  "name": "curryId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 623,
+                  "src": "370:12:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 618,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "370:4:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 621,
+                  "indexed": false,
+                  "name": "newAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 623,
+                  "src": "384:18:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 620,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "384:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "369:34:5"
+            },
+            "src": "349:55:5"
+          },
+          {
+            "constant": false,
+            "id": 626,
+            "name": "curryList",
+            "nodeType": "VariableDeclaration",
+            "scope": 753,
+            "src": "431:35:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_Profile_$610_storage_$dyn_storage",
+              "typeString": "struct Profiles.Profile[]"
+            },
+            "typeName": {
+              "baseType": {
+                "contractScope": null,
+                "id": 624,
+                "name": "Profiles.Profile",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 610,
+                "src": "431:16:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Profile_$610_storage_ptr",
+                  "typeString": "struct Profiles.Profile"
+                }
+              },
+              "id": 625,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "431:18:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_Profile_$610_storage_$dyn_storage_ptr",
+                "typeString": "struct Profiles.Profile[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 630,
+            "name": "addressToCurry",
+            "nodeType": "VariableDeclaration",
+            "scope": 753,
+            "src": "507:40:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+              "typeString": "mapping(address => uint256)"
+            },
+            "typeName": {
+              "id": 629,
+              "keyType": {
+                "id": 627,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "516:7:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "507:25:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                "typeString": "mapping(address => uint256)"
+              },
+              "valueType": {
+                "id": 628,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "527:4:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 657,
+              "nodeType": "Block",
+              "src": "636:123:5",
+              "statements": [
+                {
+                  "assignments": [
+                    644
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 644,
+                      "name": "curry",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 658,
+                      "src": "646:29:5",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Profile_$610_memory_ptr",
+                        "typeString": "struct Profiles.Profile"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 643,
+                        "name": "Profiles.Profile",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 610,
+                        "src": "646:16:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Profile_$610_storage_ptr",
+                          "typeString": "struct Profiles.Profile"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 648,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 645,
+                      "name": "curryList",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 626,
+                      "src": "678:9:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_Profile_$610_storage_$dyn_storage",
+                        "typeString": "struct Profiles.Profile storage ref[] storage ref"
+                      }
+                    },
+                    "id": 647,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 646,
+                      "name": "curryId",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 632,
+                      "src": "688:7:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "678:18:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Profile_$610_storage",
+                      "typeString": "struct Profiles.Profile storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "646:50:5"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 649,
+                          "name": "curry",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 644,
+                          "src": "715:5:5",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Profile_$610_memory_ptr",
+                            "typeString": "struct Profiles.Profile memory"
+                          }
+                        },
+                        "id": 650,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "name",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 605,
+                        "src": "715:10:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 651,
+                          "name": "curry",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 644,
+                          "src": "727:5:5",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Profile_$610_memory_ptr",
+                            "typeString": "struct Profiles.Profile memory"
+                          }
+                        },
+                        "id": 652,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "wallet",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 607,
+                        "src": "727:12:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 653,
+                          "name": "curry",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 644,
+                          "src": "741:5:5",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Profile_$610_memory_ptr",
+                            "typeString": "struct Profiles.Profile memory"
+                          }
+                        },
+                        "id": 654,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "rank",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 609,
+                        "src": "741:10:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "id": 655,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "714:38:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_string_memory_$_t_address_$_t_uint256_$",
+                      "typeString": "tuple(string memory,address,uint256)"
+                    }
+                  },
+                  "functionReturnParameters": 640,
+                  "id": 656,
+                  "nodeType": "Return",
+                  "src": "707:45:5"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 658,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getProfile",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 633,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 632,
+                  "name": "curryId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 658,
+                  "src": "574:12:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 631,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "574:4:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "573:14:5"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 640,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 635,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 658,
+                  "src": "613:6:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 634,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "613:6:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 637,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 658,
+                  "src": "621:7:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 636,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "621:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 639,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 658,
+                  "src": "630:4:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 638,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "630:4:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "612:23:5"
+            },
+            "scope": 753,
+            "src": "554:205:5",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 668,
+              "nodeType": "Block",
+              "src": "814:50:5",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 663,
+                      "name": "addressToCurry",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 630,
+                      "src": "831:14:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                        "typeString": "mapping(address => uint256)"
+                      }
+                    },
+                    "id": 666,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 664,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1326,
+                        "src": "846:3:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 665,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "846:10:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "831:26:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 662,
+                  "id": 667,
+                  "nodeType": "Return",
+                  "src": "824:33:5"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 669,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getCurryId",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 659,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "784:2:5"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 662,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 661,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 669,
+                  "src": "808:4:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 660,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "808:4:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "807:6:5"
+            },
+            "scope": 753,
+            "src": "765:99:5",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 710,
+              "nodeType": "Block",
+              "src": "973:354:5",
+              "statements": [
+                {
+                  "assignments": [
+                    681
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 681,
+                      "name": "curry",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 711,
+                      "src": "1019:29:5",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Profile_$610_memory_ptr",
+                        "typeString": "struct Profiles.Profile"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 680,
+                        "name": "Profiles.Profile",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 610,
+                        "src": "1019:16:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Profile_$610_storage_ptr",
+                          "typeString": "struct Profiles.Profile"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 689,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 684,
+                        "name": "name",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 671,
+                        "src": "1068:4:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 685,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1326,
+                          "src": "1074:3:5",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 686,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "1074:10:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "30",
+                        "id": 687,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1086:1:5",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_0_by_1",
+                          "typeString": "int_const 0"
+                        },
+                        "value": "0"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_rational_0_by_1",
+                          "typeString": "int_const 0"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 682,
+                        "name": "Profiles",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 611,
+                        "src": "1051:8:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_Profiles_$611_$",
+                          "typeString": "type(library Profiles)"
+                        }
+                      },
+                      "id": 683,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "Profile",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 610,
+                      "src": "1051:16:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_Profile_$610_storage_ptr_$",
+                        "typeString": "type(struct Profiles.Profile storage pointer)"
+                      }
+                    },
+                    "id": 688,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1051:37:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Profile_$610_memory",
+                      "typeString": "struct Profiles.Profile memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1019:69:5"
+                },
+                {
+                  "assignments": [
+                    691
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 691,
+                      "name": "id",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 711,
+                      "src": "1140:7:5",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 690,
+                        "name": "uint",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "1140:4:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 696,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 694,
+                        "name": "curry",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 681,
+                        "src": "1165:5:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Profile_$610_memory_ptr",
+                          "typeString": "struct Profiles.Profile memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_Profile_$610_memory_ptr",
+                          "typeString": "struct Profiles.Profile memory"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 692,
+                        "name": "curryList",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 626,
+                        "src": "1150:9:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_Profile_$610_storage_$dyn_storage",
+                          "typeString": "struct Profiles.Profile storage ref[] storage ref"
+                        }
+                      },
+                      "id": 693,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "1150:14:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_Profile_$610_storage_$returns$_t_uint256_$",
+                        "typeString": "function (struct Profiles.Profile storage ref) returns (uint256)"
+                      }
+                    },
+                    "id": 695,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1150:21:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1140:31:5"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 702,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 697,
+                        "name": "addressToCurry",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 630,
+                        "src": "1239:14:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                          "typeString": "mapping(address => uint256)"
+                        }
+                      },
+                      "id": 700,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 698,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1326,
+                          "src": "1254:3:5",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 699,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "1254:10:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1239:26:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 701,
+                      "name": "id",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 691,
+                      "src": "1268:2:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1239:31:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 703,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1239:31:5"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 705,
+                        "name": "id",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 691,
+                        "src": "1297:2:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 704,
+                      "name": "Registered",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 617,
+                      "src": "1286:10:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256)"
+                      }
+                    },
+                    "id": 706,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1286:14:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 707,
+                  "nodeType": "EmitStatement",
+                  "src": "1281:19:5"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 708,
+                    "name": "id",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 691,
+                    "src": "1318:2:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 677,
+                  "id": 709,
+                  "nodeType": "Return",
+                  "src": "1311:9:5"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 711,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "registerAsCurry",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 674,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 671,
+                  "name": "name",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 711,
+                  "src": "922:11:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 670,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "922:6:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 673,
+                  "name": "price",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 711,
+                  "src": "935:10:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 672,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "935:4:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "921:25:5"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 677,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 676,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 711,
+                  "src": "967:4:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 675,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "967:4:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "966:6:5"
+            },
+            "scope": 753,
+            "src": "897:430:5",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 751,
+              "nodeType": "Block",
+              "src": "1434:445:5",
+              "statements": [
+                {
+                  "assignments": [
+                    717
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 717,
+                      "name": "currentAddress",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 752,
+                      "src": "1444:22:5",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      },
+                      "typeName": {
+                        "id": 716,
+                        "name": "address",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "1444:7:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 720,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 718,
+                      "name": "msg",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1326,
+                      "src": "1469:3:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_magic_message",
+                        "typeString": "msg"
+                      }
+                    },
+                    "id": 719,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "sender",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": null,
+                    "src": "1469:10:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1444:35:5"
+                },
+                {
+                  "assignments": [
+                    722
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 722,
+                      "name": "id",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 752,
+                      "src": "1544:7:5",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 721,
+                        "name": "uint",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "1544:4:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 726,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 723,
+                      "name": "addressToCurry",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 630,
+                      "src": "1554:14:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                        "typeString": "mapping(address => uint256)"
+                      }
+                    },
+                    "id": 725,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 724,
+                      "name": "currentAddress",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 717,
+                      "src": "1569:14:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "1554:30:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1544:40:5"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 732,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 727,
+                          "name": "curryList",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 626,
+                          "src": "1594:9:5",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_array$_t_struct$_Profile_$610_storage_$dyn_storage",
+                            "typeString": "struct Profiles.Profile storage ref[] storage ref"
+                          }
+                        },
+                        "id": 729,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 728,
+                          "name": "id",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 722,
+                          "src": "1604:2:5",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "1594:13:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Profile_$610_storage",
+                          "typeString": "struct Profiles.Profile storage ref"
+                        }
+                      },
+                      "id": 730,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "wallet",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 607,
+                      "src": "1594:20:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 731,
+                      "name": "newAddress",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 713,
+                      "src": "1617:10:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "1594:33:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 733,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1594:33:5"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 738,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 734,
+                        "name": "addressToCurry",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 630,
+                        "src": "1695:14:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                          "typeString": "mapping(address => uint256)"
+                        }
+                      },
+                      "id": 736,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 735,
+                        "name": "newAddress",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 713,
+                        "src": "1710:10:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1695:26:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 737,
+                      "name": "id",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 722,
+                      "src": "1724:2:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1695:31:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 739,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1695:31:5"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 744,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "delete",
+                    "prefix": true,
+                    "src": "1793:33:5",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 740,
+                        "name": "addressToCurry",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 630,
+                        "src": "1800:14:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                          "typeString": "mapping(address => uint256)"
+                        }
+                      },
+                      "id": 743,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 741,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1326,
+                          "src": "1815:3:5",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 742,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "1815:10:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1800:26:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 745,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1793:33:5"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 747,
+                        "name": "id",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 722,
+                        "src": "1857:2:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 748,
+                        "name": "newAddress",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 713,
+                        "src": "1861:10:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 746,
+                      "name": "AddressUpdated",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 623,
+                      "src": "1842:14:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_address_$returns$__$",
+                        "typeString": "function (uint256,address)"
+                      }
+                    },
+                    "id": 749,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1842:30:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 750,
+                  "nodeType": "EmitStatement",
+                  "src": "1837:35:5"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 752,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "updateAddressAsCurry",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 714,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 713,
+                  "name": "newAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 752,
+                  "src": "1407:18:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 712,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1407:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1406:20:5"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 715,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1434:0:5"
+            },
+            "scope": 753,
+            "src": "1377:502:5",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 754,
+        "src": "176:1705:5"
+      }
+    ],
+    "src": "0:1882:5"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/phoomparin/Projects/curry-chain/contracts/Profiles.sol",
+    "exportedSymbols": {
+      "CurryProfiles": [
+        753
+      ],
+      "Profiles": [
+        611
+      ]
+    },
+    "id": 754,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 603,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:5"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 611,
+        "linearizedBaseContracts": [
+          611
+        ],
+        "name": "Profiles",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Profiles.Profile",
+            "id": 610,
+            "members": [
+              {
+                "constant": false,
+                "id": 605,
+                "name": "name",
+                "nodeType": "VariableDeclaration",
+                "scope": 610,
+                "src": "111:11:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 604,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "111:6:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 607,
+                "name": "wallet",
+                "nodeType": "VariableDeclaration",
+                "scope": 610,
+                "src": "132:14:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 606,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "132:7:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 609,
+                "name": "rank",
+                "nodeType": "VariableDeclaration",
+                "scope": 610,
+                "src": "156:9:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 608,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "156:4:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Profile",
+            "nodeType": "StructDefinition",
+            "scope": 611,
+            "src": "86:86:5",
+            "visibility": "public"
+          }
+        ],
+        "scope": 754,
+        "src": "26:148:5"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 753,
+        "linearizedBaseContracts": [
+          753
+        ],
+        "name": "CurryProfiles",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 613,
+            "libraryName": {
+              "contractScope": null,
+              "id": 612,
+              "name": "Profiles",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 611,
+              "src": "211:8:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Profiles_$611",
+                "typeString": "library Profiles"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "205:21:5",
+            "typeName": null
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 617,
+            "name": "Registered",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 616,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 615,
+                  "indexed": false,
+                  "name": "curryId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 617,
+                  "src": "280:12:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 614,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "280:4:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "279:14:5"
+            },
+            "src": "263:31:5"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 623,
+            "name": "AddressUpdated",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 622,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 619,
+                  "indexed": false,
+                  "name": "curryId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 623,
+                  "src": "370:12:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 618,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "370:4:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 621,
+                  "indexed": false,
+                  "name": "newAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 623,
+                  "src": "384:18:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 620,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "384:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "369:34:5"
+            },
+            "src": "349:55:5"
+          },
+          {
+            "constant": false,
+            "id": 626,
+            "name": "curryList",
+            "nodeType": "VariableDeclaration",
+            "scope": 753,
+            "src": "431:35:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_Profile_$610_storage_$dyn_storage",
+              "typeString": "struct Profiles.Profile[]"
+            },
+            "typeName": {
+              "baseType": {
+                "contractScope": null,
+                "id": 624,
+                "name": "Profiles.Profile",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 610,
+                "src": "431:16:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Profile_$610_storage_ptr",
+                  "typeString": "struct Profiles.Profile"
+                }
+              },
+              "id": 625,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "431:18:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_Profile_$610_storage_$dyn_storage_ptr",
+                "typeString": "struct Profiles.Profile[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 630,
+            "name": "addressToCurry",
+            "nodeType": "VariableDeclaration",
+            "scope": 753,
+            "src": "507:40:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+              "typeString": "mapping(address => uint256)"
+            },
+            "typeName": {
+              "id": 629,
+              "keyType": {
+                "id": 627,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "516:7:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "507:25:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                "typeString": "mapping(address => uint256)"
+              },
+              "valueType": {
+                "id": 628,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "527:4:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 657,
+              "nodeType": "Block",
+              "src": "636:123:5",
+              "statements": [
+                {
+                  "assignments": [
+                    644
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 644,
+                      "name": "curry",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 658,
+                      "src": "646:29:5",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Profile_$610_memory_ptr",
+                        "typeString": "struct Profiles.Profile"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 643,
+                        "name": "Profiles.Profile",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 610,
+                        "src": "646:16:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Profile_$610_storage_ptr",
+                          "typeString": "struct Profiles.Profile"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 648,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 645,
+                      "name": "curryList",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 626,
+                      "src": "678:9:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_Profile_$610_storage_$dyn_storage",
+                        "typeString": "struct Profiles.Profile storage ref[] storage ref"
+                      }
+                    },
+                    "id": 647,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 646,
+                      "name": "curryId",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 632,
+                      "src": "688:7:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "678:18:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Profile_$610_storage",
+                      "typeString": "struct Profiles.Profile storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "646:50:5"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 649,
+                          "name": "curry",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 644,
+                          "src": "715:5:5",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Profile_$610_memory_ptr",
+                            "typeString": "struct Profiles.Profile memory"
+                          }
+                        },
+                        "id": 650,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "name",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 605,
+                        "src": "715:10:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 651,
+                          "name": "curry",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 644,
+                          "src": "727:5:5",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Profile_$610_memory_ptr",
+                            "typeString": "struct Profiles.Profile memory"
+                          }
+                        },
+                        "id": 652,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "wallet",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 607,
+                        "src": "727:12:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 653,
+                          "name": "curry",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 644,
+                          "src": "741:5:5",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Profile_$610_memory_ptr",
+                            "typeString": "struct Profiles.Profile memory"
+                          }
+                        },
+                        "id": 654,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "rank",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 609,
+                        "src": "741:10:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "id": 655,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "714:38:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_string_memory_$_t_address_$_t_uint256_$",
+                      "typeString": "tuple(string memory,address,uint256)"
+                    }
+                  },
+                  "functionReturnParameters": 640,
+                  "id": 656,
+                  "nodeType": "Return",
+                  "src": "707:45:5"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 658,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getProfile",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 633,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 632,
+                  "name": "curryId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 658,
+                  "src": "574:12:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 631,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "574:4:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "573:14:5"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 640,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 635,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 658,
+                  "src": "613:6:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 634,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "613:6:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 637,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 658,
+                  "src": "621:7:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 636,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "621:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 639,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 658,
+                  "src": "630:4:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 638,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "630:4:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "612:23:5"
+            },
+            "scope": 753,
+            "src": "554:205:5",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 668,
+              "nodeType": "Block",
+              "src": "814:50:5",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 663,
+                      "name": "addressToCurry",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 630,
+                      "src": "831:14:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                        "typeString": "mapping(address => uint256)"
+                      }
+                    },
+                    "id": 666,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 664,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1326,
+                        "src": "846:3:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 665,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "846:10:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "831:26:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 662,
+                  "id": 667,
+                  "nodeType": "Return",
+                  "src": "824:33:5"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 669,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getCurryId",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 659,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "784:2:5"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 662,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 661,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 669,
+                  "src": "808:4:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 660,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "808:4:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "807:6:5"
+            },
+            "scope": 753,
+            "src": "765:99:5",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 710,
+              "nodeType": "Block",
+              "src": "973:354:5",
+              "statements": [
+                {
+                  "assignments": [
+                    681
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 681,
+                      "name": "curry",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 711,
+                      "src": "1019:29:5",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Profile_$610_memory_ptr",
+                        "typeString": "struct Profiles.Profile"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 680,
+                        "name": "Profiles.Profile",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 610,
+                        "src": "1019:16:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Profile_$610_storage_ptr",
+                          "typeString": "struct Profiles.Profile"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 689,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 684,
+                        "name": "name",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 671,
+                        "src": "1068:4:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 685,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1326,
+                          "src": "1074:3:5",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 686,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "1074:10:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "30",
+                        "id": 687,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1086:1:5",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_0_by_1",
+                          "typeString": "int_const 0"
+                        },
+                        "value": "0"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_rational_0_by_1",
+                          "typeString": "int_const 0"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 682,
+                        "name": "Profiles",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 611,
+                        "src": "1051:8:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_Profiles_$611_$",
+                          "typeString": "type(library Profiles)"
+                        }
+                      },
+                      "id": 683,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "Profile",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 610,
+                      "src": "1051:16:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_Profile_$610_storage_ptr_$",
+                        "typeString": "type(struct Profiles.Profile storage pointer)"
+                      }
+                    },
+                    "id": 688,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1051:37:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Profile_$610_memory",
+                      "typeString": "struct Profiles.Profile memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1019:69:5"
+                },
+                {
+                  "assignments": [
+                    691
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 691,
+                      "name": "id",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 711,
+                      "src": "1140:7:5",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 690,
+                        "name": "uint",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "1140:4:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 696,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 694,
+                        "name": "curry",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 681,
+                        "src": "1165:5:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Profile_$610_memory_ptr",
+                          "typeString": "struct Profiles.Profile memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_Profile_$610_memory_ptr",
+                          "typeString": "struct Profiles.Profile memory"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 692,
+                        "name": "curryList",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 626,
+                        "src": "1150:9:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_Profile_$610_storage_$dyn_storage",
+                          "typeString": "struct Profiles.Profile storage ref[] storage ref"
+                        }
+                      },
+                      "id": 693,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "1150:14:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_Profile_$610_storage_$returns$_t_uint256_$",
+                        "typeString": "function (struct Profiles.Profile storage ref) returns (uint256)"
+                      }
+                    },
+                    "id": 695,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1150:21:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1140:31:5"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 702,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 697,
+                        "name": "addressToCurry",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 630,
+                        "src": "1239:14:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                          "typeString": "mapping(address => uint256)"
+                        }
+                      },
+                      "id": 700,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 698,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1326,
+                          "src": "1254:3:5",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 699,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "1254:10:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1239:26:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 701,
+                      "name": "id",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 691,
+                      "src": "1268:2:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1239:31:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 703,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1239:31:5"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 705,
+                        "name": "id",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 691,
+                        "src": "1297:2:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 704,
+                      "name": "Registered",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 617,
+                      "src": "1286:10:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256)"
+                      }
+                    },
+                    "id": 706,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1286:14:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 707,
+                  "nodeType": "EmitStatement",
+                  "src": "1281:19:5"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 708,
+                    "name": "id",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 691,
+                    "src": "1318:2:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 677,
+                  "id": 709,
+                  "nodeType": "Return",
+                  "src": "1311:9:5"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 711,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "registerAsCurry",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 674,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 671,
+                  "name": "name",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 711,
+                  "src": "922:11:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 670,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "922:6:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 673,
+                  "name": "price",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 711,
+                  "src": "935:10:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 672,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "935:4:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "921:25:5"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 677,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 676,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 711,
+                  "src": "967:4:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 675,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "967:4:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "966:6:5"
+            },
+            "scope": 753,
+            "src": "897:430:5",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 751,
+              "nodeType": "Block",
+              "src": "1434:445:5",
+              "statements": [
+                {
+                  "assignments": [
+                    717
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 717,
+                      "name": "currentAddress",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 752,
+                      "src": "1444:22:5",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      },
+                      "typeName": {
+                        "id": 716,
+                        "name": "address",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "1444:7:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 720,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 718,
+                      "name": "msg",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1326,
+                      "src": "1469:3:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_magic_message",
+                        "typeString": "msg"
+                      }
+                    },
+                    "id": 719,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "sender",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": null,
+                    "src": "1469:10:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1444:35:5"
+                },
+                {
+                  "assignments": [
+                    722
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 722,
+                      "name": "id",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 752,
+                      "src": "1544:7:5",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 721,
+                        "name": "uint",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "1544:4:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 726,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 723,
+                      "name": "addressToCurry",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 630,
+                      "src": "1554:14:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                        "typeString": "mapping(address => uint256)"
+                      }
+                    },
+                    "id": 725,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 724,
+                      "name": "currentAddress",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 717,
+                      "src": "1569:14:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "1554:30:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1544:40:5"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 732,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 727,
+                          "name": "curryList",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 626,
+                          "src": "1594:9:5",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_array$_t_struct$_Profile_$610_storage_$dyn_storage",
+                            "typeString": "struct Profiles.Profile storage ref[] storage ref"
+                          }
+                        },
+                        "id": 729,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 728,
+                          "name": "id",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 722,
+                          "src": "1604:2:5",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "1594:13:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Profile_$610_storage",
+                          "typeString": "struct Profiles.Profile storage ref"
+                        }
+                      },
+                      "id": 730,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "wallet",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 607,
+                      "src": "1594:20:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 731,
+                      "name": "newAddress",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 713,
+                      "src": "1617:10:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "1594:33:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 733,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1594:33:5"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 738,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 734,
+                        "name": "addressToCurry",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 630,
+                        "src": "1695:14:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                          "typeString": "mapping(address => uint256)"
+                        }
+                      },
+                      "id": 736,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 735,
+                        "name": "newAddress",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 713,
+                        "src": "1710:10:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1695:26:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 737,
+                      "name": "id",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 722,
+                      "src": "1724:2:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1695:31:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 739,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1695:31:5"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 744,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "delete",
+                    "prefix": true,
+                    "src": "1793:33:5",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 740,
+                        "name": "addressToCurry",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 630,
+                        "src": "1800:14:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                          "typeString": "mapping(address => uint256)"
+                        }
+                      },
+                      "id": 743,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 741,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1326,
+                          "src": "1815:3:5",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 742,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "1815:10:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1800:26:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 745,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1793:33:5"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 747,
+                        "name": "id",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 722,
+                        "src": "1857:2:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 748,
+                        "name": "newAddress",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 713,
+                        "src": "1861:10:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 746,
+                      "name": "AddressUpdated",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 623,
+                      "src": "1842:14:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_address_$returns$__$",
+                        "typeString": "function (uint256,address)"
+                      }
+                    },
+                    "id": 749,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1842:30:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 750,
+                  "nodeType": "EmitStatement",
+                  "src": "1837:35:5"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 752,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "updateAddressAsCurry",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 714,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 713,
+                  "name": "newAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 752,
+                  "src": "1407:18:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 712,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1407:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1406:20:5"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 715,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1434:0:5"
+            },
+            "scope": 753,
+            "src": "1377:502:5",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 754,
+        "src": "176:1705:5"
+      }
+    ],
+    "src": "0:1882:5"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2018-07-29T13:43:23.418Z"
+}

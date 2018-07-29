@@ -1,31 +1,16 @@
 pragma solidity ^0.4.24;
 
-import "./Base.sol";
 import "./Profiles.sol";
 
-contract CurryJobs is CurryBase {
-    CurryProfiles profiles = CurryProfiles(msg.sender);
+library Jobs {
+    // Job Metadata
+    struct Job {
+        uint price;
+        Status status;
+    }
 
-    /// @title A curry has accepted the customer's offer.
-    event JobAccepted(uint curryId, address customer);
-
-    /// @title A curry has rejected the customer's offer.
-    event JobRejected(uint curryId, address customer);
-
-    /// @title Something gone wrong and they canceled. No big deal?
-    event JobCanceled(uint curryId, address customer);
-
-    /// @title They're doing something cool, I guess
-    event JobInProgress(uint curryId, address customer);
-
-    /// @title A curry is awaiting for payment.
-    event JobAwaitingPayment(uint curryId, address customer);
-
-    /// @title Curry ID -> Customer Address -> Job
-    mapping (uint => mapping (address => CurryJob)) jobsMapping;
-
-    /// @title Current Status of the Job
-    enum JobStatus {
+    // Current Status of the Job
+    enum Status {
         Requested,
         Accepted,
         Rejected,
@@ -34,64 +19,93 @@ contract CurryJobs is CurryBase {
         AwaitingPayment,
         Paid
     }
+}
 
-    /// @title Job Metadata
-    struct CurryJob {
-        uint price;
-        JobStatus status;
+contract CurryJobs {
+    using Jobs for *;
+
+    CurryProfiles profiles = CurryProfiles(msg.sender);
+
+    // A curry has accepted the customer's offer.
+    event Accepted(uint curryId, address customer);
+
+    // A curry has rejected the customer's offer.
+    event Rejected(uint curryId, address customer);
+
+    // Something gone wrong and they canceled. No big deal?
+    event Canceled(uint curryId, address customer);
+
+    // They're doing something cool, I guess
+    event InProgress(uint curryId, address customer);
+
+    // A curry is awaiting for payment.
+    event JobAwaitingPayment(uint curryId, address customer);
+
+    // Curry ID -> Customer Address -> Job
+    mapping (uint => mapping (address => Jobs.Job)) public jobsMapping;
+
+    function createJob(uint curryId, uint price) public {
+        jobsMapping[curryId][msg.sender] = Jobs.Job(price, Jobs.Status.Requested);
     }
 
-    function updateJobStatus(address customer, JobStatus status) private {
+    function getJob(uint curryId)
+    view external returns (uint, Jobs.Status) {
+        Jobs.Job storage job = jobsMapping[curryId][msg.sender];
+
+        return (job.price, job.status);
+    }
+
+    function updateJobStatus(address customer, Jobs.Status status) public {
         uint curryId = profiles.getCurryId();
-        CurryJob storage job = jobsMapping[curryId][customer];
+        Jobs.Job storage job = jobsMapping[curryId][customer];
 
         job.status = status;
 
-        if (status == JobStatus.Accepted) {
-            emit JobAccepted(curryId, customer);
+        if (status == Jobs.Status.Accepted) {
+            emit Accepted(curryId, customer);
         }
 
-        if (status == JobStatus.Rejected) {
-            emit JobRejected(curryId, customer);
+        if (status == Jobs.Status.Rejected) {
+            emit Rejected(curryId, customer);
         }
 
-        if (status == JobStatus.Canceled) {
-            emit JobCanceled(curryId, customer);
+        if (status == Jobs.Status.Canceled) {
+            emit Canceled(curryId, customer);
         }
 
-        if (status == JobStatus.InProgress) {
-            emit JobInProgress(curryId, customer);
+        if (status == Jobs.Status.InProgress) {
+            emit InProgress(curryId, customer);
         }
 
-        if (status == JobStatus.InProgress) {
+        if (status == Jobs.Status.InProgress) {
             emit JobAwaitingPayment(curryId, customer);
         }
     }
 
     function acceptJobAsCurry(address customer) public {
-        updateJobStatus(customer, JobStatus.Accepted);
+        updateJobStatus(customer, Jobs.Status.Accepted);
     }
 
     function startJobAsCurry(address customer) public {
-        updateJobStatus(customer, JobStatus.InProgress);
+        updateJobStatus(customer, Jobs.Status.InProgress);
     }
 
     function markDoneAsCurry(address customer) public {
-        updateJobStatus(customer, JobStatus.AwaitingPayment);
+        updateJobStatus(customer, Jobs.Status.AwaitingPayment);
     }
 
     function cancelJob(address customer) public {
-        updateJobStatus(customer, JobStatus.Canceled);
+        updateJobStatus(customer, Jobs.Status.Canceled);
     }
 
     function rejectJobAsCurry(address customer) public {
-        updateJobStatus(customer, JobStatus.Rejected);
+        updateJobStatus(customer, Jobs.Status.Rejected);
     }
 
-    /// @title Customer mark the job as done
+    // Customer mark the job as done
     function markDoneAsCustomer(uint curryId) public {
-        CurryJob storage job = jobsMapping[curryId][msg.sender];
+        Jobs.Job storage job = jobsMapping[curryId][msg.sender];
 
-        job.status = JobStatus.AwaitingPayment;
+        job.status = Jobs.Status.AwaitingPayment;
     }
 }
