@@ -1,7 +1,7 @@
 pragma solidity ^0.4.24;
 
-import "./CurryBase.sol";
-import "./CurryProfiles.sol";
+import "./Base.sol";
+import "./Profiles.sol";
 
 contract CurryJobs is CurryBase {
     CurryProfiles profiles = CurryProfiles(msg.sender);

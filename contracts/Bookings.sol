@@ -1,8 +1,8 @@
 pragma solidity ^0.4.24;
 
-import "./CurryBase.sol";
-import "./CurryJobs.sol";
-import "./CurryToken.sol";
+import "./Base.sol";
+import "./Jobs.sol";
+import "./Token.sol";
 
 contract CurryBookings is CurryBase {
     CurryJobs jobs = CurryJobs(msg.sender);
